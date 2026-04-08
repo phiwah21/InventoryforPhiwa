@@ -40,9 +40,9 @@ public class InventoryTest extends Base {
     public void navigateToInventoryForm() {
         dashboardPage.navigateToInventoryForm();
     }
-    @AfterTest
-    public void closeBrowser() {
-        driver.quit();
-    }
+    //@AfterTest
+    //public void closeBrowser() {
+       // driver.quit();
+   // }
 
 }

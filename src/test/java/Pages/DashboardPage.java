@@ -17,15 +17,15 @@ public class DashboardPage {
     WebDriverWait wait;
     Actions actions;
 
-    // 🔹 Learn dropdown
+    // Learn dropdown
     @FindBy(xpath = "//*[@id=\"app-root\"]/nav/div[1]/div[2]/div[1]/button/span[2]")
     WebElement learnDropdown;
 
-    // 🔹 Learning Material option
+    // Learning Material option
     @FindBy(xpath = "//*[@id=\"app-root\"]/nav/div[1]/div[2]/div[1]/div/button[2]/span[2]")
     WebElement learningMaterialOption;
 
-    // 🔹 Web Automation option
+    // Web Automation option
     @FindBy(xpath = "//*[@id=\"tab-btn-web\"]/span[2]")
     WebElement webAutomationCard;
 
@@ -39,9 +39,9 @@ public class DashboardPage {
 
     // ✅ Hover or click Learn dropdown
     public void openLearnDropdown() {
-        actions.moveToElement(learnDropdown).perform();
+        //actions.moveToElement(learnDropdown).perform();
         // If hover doesn't work, use click instead:
-        // learnDropdown.click();
+         learnDropdown.click();
     }
 
     // ✅ Click Learning Material
