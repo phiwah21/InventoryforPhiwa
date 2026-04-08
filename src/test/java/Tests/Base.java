@@ -2,6 +2,7 @@ package Tests;
 
 import Pages.DashboardPage;
 import Pages.HomePage;
+import Pages.InventoryPage;
 import Pages.LoginPage;
 //import Util/s.BrowserFactory;
 import Utils.DriverFactory;
@@ -18,5 +19,6 @@ public class Base {
     HomePage homePage = PageFactory.initElements(driver, HomePage.class);
     LoginPage loginPage = PageFactory.initElements(driver, LoginPage.class);
     DashboardPage dashboardPage= PageFactory.initElements(driver,DashboardPage.class);
+    InventoryPage inventoryPage= PageFactory.initElements(driver,InventoryPage.class);
     //TakeScreenshots takeScreenshots = new TakeScreenshots();
 }

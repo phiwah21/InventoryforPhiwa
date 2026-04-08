@@ -19,7 +19,7 @@ public class InventoryPage {
     @FindBy(id = "brand")
     WebElement brand;
 
-    @FindBy(id = "storage")
+    @FindBy(xpath = "//*[@id=\"inventory-form-grid\"]/div[4]/div/label[2]/span")
     WebElement storage;
 
     @FindBy(id = "color")
@@ -34,13 +34,13 @@ public class InventoryPage {
     @FindBy(xpath = "//button[contains(text(),'Next')]")
     WebElement next;
 
-    @FindBy(id = "expressShipping")
+    @FindBy(id = "shipping-option-express")
     WebElement express;
 
-    @FindBy(id = "warranty")
+    @FindBy(id = "warranty-option-1yr")
     WebElement warranty;
 
-    @FindBy(id = "discountCode")
+    @FindBy(id = "discount-code")
     WebElement discount;
 
     @FindBy(xpath = "//button[contains(text(),'Apply')]")
@@ -61,7 +61,7 @@ public class InventoryPage {
     public void fillForm() {
         new Select(device).selectByVisibleText("Phone");
         new Select(brand).selectByVisibleText("Apple");
-        new Select(storage).selectByVisibleText("128GB");
+        storage.click();
         new Select(color).selectByVisibleText("Blue");
 
         quantity.sendKeys("2");

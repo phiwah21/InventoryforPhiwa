@@ -1,6 +1,7 @@
 package Tests;
 
 import Utils.ReadFromFile;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
@@ -39,6 +40,19 @@ public class InventoryTest extends Base {
     @Test(dependsOnMethods = "loginPageIsDisplayed")
     public void navigateToInventoryForm() {
         dashboardPage.navigateToInventoryForm();
+    }
+    @Test(dependsOnMethods = "navigateToInventoryForm")
+    public void fillInventoryForm() {
+
+        inventoryPage.fillForm();
+        inventoryPage.nextStep();
+        inventoryPage.selectExtras();
+        inventoryPage.applyDiscount();
+        inventoryPage.confirmOrder();
+    }
+    @Test(dependsOnMethods = "fillInventoryForm")
+    public void verifyOrderSuccess() {
+        Assert.assertTrue(inventoryPage.isSuccessDisplayed());
     }
     //@AfterTest
     //public void closeBrowser() {
